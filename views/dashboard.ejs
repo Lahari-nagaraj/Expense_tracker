@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Daily Totals</h1>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Total Expense</th>
+            </tr>
+            <% dailyTotals.forEach(total=> { %>
+                <tr>
+                    <td>
+                        <%= total.date %>
+                    </td>
+                    <td>₹<%= total.total %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+        <a href="/" class="button">Back</a>
+    </div>
+</body>
+
+</html>

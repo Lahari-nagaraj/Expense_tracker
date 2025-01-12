@@ -1,0 +1,134 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headings */
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Summary boxes */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.green {
+    background: #28a745;
+}
+
+.red {
+    background: #dc3545;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+button,
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    /* Adjust padding to fit text size */
+    font-size: 14px;
+    /* Reduce font size slightly */
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+button:hover,
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #f4f5f7;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Center actions on forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button alignment within forms */
+.actions .button {
+    display: inline-block;
+    width: auto;
+    /* Prevent full-width buttons */
+    margin: 0 5px;
+}

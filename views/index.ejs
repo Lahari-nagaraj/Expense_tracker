@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="summary">
+            <div class="box green">Total Income: ₹<%= totalIncome %>
+            </div>
+            <div class="box red">Total Expense: ₹<%= totalExpense %>
+            </div>
+        </div>
+        <h2>Expenditures</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+            <% expenses.forEach(expense=> { %>
+                <tr>
+                    <td>
+                        <%= expense.date %>
+                    </td>
+                    <td>
+                        <%= expense.description %>
+                    </td>
+                    <td>₹<%= expense.amount %>
+                    </td>
+                    <td>
+                        <form action="/delete-expense/<%= expense.id %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+        <div class="actions">
+            <a href="/add-expense" class="button">Add Expense</a>
+            <a href="/add-income" class="button">Add Income</a>
+            <a href="/dashboard" class="button">View Dashboard</a>
+        </div>
+    </div>
+</body>
+
+</html>
